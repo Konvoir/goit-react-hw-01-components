@@ -20,13 +20,15 @@ const Statistics = ({title, stats}) => {
 
 
 
-{ <stats className="map"></stats>
-
-}
-        <li class={styles.item}>
+{ <stats.map(element => (<li class={styles.item}>
         <span class={styles.label}>{stats.label}</span>
         <span class={styles.percentage}>{stats.percentage}%</span>
         </li>
+
+))> 
+
+}
+        
 
 
         <li class="item">

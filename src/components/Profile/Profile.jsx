@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from './ProfileStyles.module.css';
+import styles from './Profile.module.css';
 
 
 
