@@ -1,11 +1,25 @@
 import PropTypes from 'prop-types';
+import s from './FriendList.module.css'
 
-export const FriendList = ({ avatar, name, isOnline, id }) => {
+export const FriendList = ({ friends }) => {
     return (
-<ul class="friend-list">
-  <!-- Произвольное кол-во FriendListItem, в зависимости от кол-ва объектов в массиве -->
+<ul className="friend-list">
+  {friends.map(friend =>
+<li 
+    key={friend.id}
+    className={s.item}>
+  <span className={s.status}></span>
+
+  <img className={s.avatar} 
+  src={friend.avatar} 
+  alt={friend.name} 
+  width="48" />
+  <p className={s.name}>{friend.name}</p>
+</li>
+ )}
 </ul>
     )
+    
 };
 
 FriendList.propTypes = {
