@@ -9,6 +9,10 @@
   padding: 8px;
 }
 
+.line {
+  background-color: #fff;
+}
+
 .value {
   text-align: center;
   padding: 8px;
